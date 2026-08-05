@@ -2,8 +2,12 @@ $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName PresentationFramework,PresentationCore,WindowsBase,System.Windows.Forms
 
 $studioRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$workspace = Split-Path -Parent $studioRoot
-$ffprobe = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffprobe.exe'
+$toolRoot = Join-Path $studioRoot 'tools'
+if (-not (Test-Path -LiteralPath $toolRoot)) {
+  $workspace = Split-Path -Parent $studioRoot
+  $toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+}
+$ffprobe = Join-Path $toolRoot 'ffmpeg\ffprobe.exe'
 $runner = Join-Path $studioRoot 'run_job.ps1'
 $methods = Get-Content -LiteralPath (Join-Path $studioRoot 'methods.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 $script:media = $null
@@ -13,6 +17,7 @@ $script:openedResult = $false
 
 [xml]$xaml = @'
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Anime Video Studio" Width="1140" Height="790" WindowStartupLocation="CenterScreen"
         Background="#0E131B" Foreground="#E6ECF5" FontFamily="Bahnschrift">
   <Window.Resources>

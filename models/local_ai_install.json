@@ -1,0 +1,18 @@
+{
+    "engine":  "stable-diffusion.cpp",
+    "engine_license":  "MIT",
+    "engine_url":  "https://github.com/leejet/stable-diffusion.cpp",
+    "model":  "Stable Diffusion v1.5 ema-only",
+    "model_license":  "CreativeML OpenRAIL-M",
+    "model_url":  "https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "model_sha256":  "6CE0161689B3853ACAA03779EC93EAFE75A02F4CED659BEE03F50797806FA2FA",
+    "accelerator":  "LCM-LoRA SD 1.5",
+    "accelerator_license":  "OpenRAIL++",
+    "accelerator_url":  "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5",
+    "accelerator_sha256":  "8F90D840E075FF588A58E22C6586E2AE9A6F7922996EE6649A7F01072333AFE4",
+    "controlnet":  "ControlNet v1.1 Canny original",
+    "controlnet_license":  "CreativeML OpenRAIL-M",
+    "controlnet_url":  "https://huggingface.co/lllyasviel/ControlNet-v1-1",
+    "controlnet_sha256":  "F99CFE4C70910E38E3FECE9918A4979ED7D3DCF9B81CEE293E1755363AF5406A",
+    "installed_at":  "2026-08-04T23:28:07.8020279-03:00"
+}

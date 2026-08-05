@@ -9,13 +9,17 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $studioRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$workspace = Split-Path -Parent $studioRoot
-$ffmpeg = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffmpeg.exe'
-$ffprobe = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffprobe.exe'
+$toolRoot = Join-Path $studioRoot 'tools'
+if (-not (Test-Path -LiteralPath $toolRoot)) {
+    $workspace = Split-Path -Parent $studioRoot
+    $toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+}
+$ffmpeg = Join-Path $toolRoot 'ffmpeg\ffmpeg.exe'
+$ffprobe = Join-Path $toolRoot 'ffmpeg\ffprobe.exe'
 $statusFile = Join-Path $JobDir 'status.txt'
 $segment = Join-Path $JobDir 'TRAMO_PARA_EBSYNTH_720p.mp4'
 $keysDir = Join-Path $JobDir 'FOTOGRAMAS_CLAVE'
-$python = Join-Path $workspace 'REARRANGED_2D\tools\animeganv3\.venv-dml\Scripts\python.exe'
+$python = Join-Path $toolRoot 'animeganv3\.venv-dml\Scripts\python.exe'
 $allKeyframesScript = Join-Path $studioRoot 'generate_all_keyframes.py'
 
 function Set-Status([string]$value) {

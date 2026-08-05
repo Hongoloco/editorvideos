@@ -2,8 +2,12 @@ $ErrorActionPreference = 'Stop'
 Add-Type -AssemblyName PresentationFramework,PresentationCore,WindowsBase,System.Windows.Forms
 
 $studioRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$workspace = Split-Path -Parent $studioRoot
-$ffprobe = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffprobe.exe'
+$toolRoot = Join-Path $studioRoot 'tools'
+if (-not (Test-Path -LiteralPath $toolRoot)) {
+  $workspace = Split-Path -Parent $studioRoot
+  $toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+}
+$ffprobe = Join-Path $toolRoot 'ffmpeg\ffprobe.exe'
 $worker = Join-Path $studioRoot 'ebsynth_job.ps1'
 $jobsRoot = Join-Path $studioRoot 'ebsynth_jobs'
 New-Item -ItemType Directory -Path $jobsRoot -Force | Out-Null

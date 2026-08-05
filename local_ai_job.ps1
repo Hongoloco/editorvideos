@@ -24,14 +24,18 @@ public static class AnimeVideoPowerState {
 $Prompt = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($PromptBase64))
 $NegativePrompt = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($NegativePromptBase64))
 $studioRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$workspace = Split-Path -Parent $studioRoot
+$toolRoot = Join-Path $studioRoot 'tools'
+if (-not (Test-Path -LiteralPath $toolRoot)) {
+    $workspace = Split-Path -Parent $studioRoot
+    $toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+}
 $engineRoot = Join-Path $studioRoot 'tools\stable-diffusion.cpp'
 $serverExe = Join-Path $engineRoot 'sd-server.exe'
 $model = Join-Path $studioRoot 'models\v1-5-pruned-emaonly.safetensors'
 $lcmLora = Join-Path $studioRoot 'models\lcm-lora-sdv1-5.safetensors'
 $controlNet = Join-Path $studioRoot 'models\control_v11p_sd15_canny.pth'
-$ffmpeg = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffmpeg.exe'
-$python = Join-Path $workspace 'REARRANGED_2D\tools\animeganv3\.venv-dml\Scripts\python.exe'
+$ffmpeg = Join-Path $toolRoot 'ffmpeg\ffmpeg.exe'
+$python = Join-Path $toolRoot 'animeganv3\.venv-dml\Scripts\python.exe'
 $previewSelector = Join-Path $studioRoot 'select_preview_keyframe.py'
 $controlMaker = Join-Path $studioRoot 'make_canny_control.py'
 $inputDir = if (Test-Path -LiteralPath (Join-Path $KeyframesRoot '02_CARTOON_VIBRANTE')) { Join-Path $KeyframesRoot '02_CARTOON_VIBRANTE' } else { Join-Path $KeyframesRoot '01_ORIGINALES' }

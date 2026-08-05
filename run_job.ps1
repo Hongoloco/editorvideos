@@ -8,8 +8,11 @@ param(
 )
 $ErrorActionPreference = 'Stop'
 $studioRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$workspace = Split-Path -Parent $studioRoot
-$toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+$toolRoot = Join-Path $studioRoot 'tools'
+if (-not (Test-Path -LiteralPath $toolRoot)) {
+    $workspace = Split-Path -Parent $studioRoot
+    $toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+}
 $ffmpeg = Join-Path $toolRoot 'ffmpeg\ffmpeg.exe'
 $ffprobe = Join-Path $toolRoot 'ffmpeg\ffprobe.exe'
 $python = Join-Path $toolRoot 'animeganv3\.venv-dml\Scripts\python.exe'

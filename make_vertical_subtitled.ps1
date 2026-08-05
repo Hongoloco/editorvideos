@@ -5,9 +5,13 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $studioRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$workspace = Split-Path -Parent $studioRoot
-$ffmpeg = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffmpeg.exe'
-$ffprobe = Join-Path $workspace 'REARRANGED_2D\tools\ffmpeg\ffprobe.exe'
+$toolRoot = Join-Path $studioRoot 'tools'
+if (-not (Test-Path -LiteralPath $toolRoot)) {
+    $workspace = Split-Path -Parent $studioRoot
+    $toolRoot = Join-Path $workspace 'REARRANGED_2D\tools'
+}
+$ffmpeg = Join-Path $toolRoot 'ffmpeg\ffmpeg.exe'
+$ffprobe = Join-Path $toolRoot 'ffmpeg\ffprobe.exe'
 $python = Join-Path $studioRoot '.venv-subtitles\Scripts\python.exe'
 $transcriber = Join-Path $studioRoot 'transcribe_subtitles.py'
 $statusFile = Join-Path $JobDir 'status.txt'
