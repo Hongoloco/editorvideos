@@ -3,18 +3,18 @@
     "id": "free_cartoon_vibrant",
     "name": "Cartoon Vibrante — Gratis",
     "available": true,
-    "quality": "Paleta más simple y luminosa, colores intensos, tinta gruesa y sombras de caricatura",
-    "continuity": "Muy alta: estilo determinista y estable en todos los fotogramas",
-    "hardware": "Funciona localmente en CPU; no usa Internet, API ni créditos",
+    "quality": "Caricatura colorida, lineas gruesas y aspecto alegre",
+    "continuity": "Muy estable: mantiene el mismo estilo en todo el video",
+    "hardware": "Funciona en esta PC sin Internet ni pagos",
     "recommended": true
   },
   {
     "id": "free_anime_draw",
     "name": "Dibujo Anime Local — Gratis",
     "available": true,
-    "quality": "Contornos de tinta, colores originales simplificados y sombreado tipo cel",
-    "continuity": "Muy alta: el mismo tratamiento determinista en cada fotograma, sin parpadeo aleatorio",
-    "hardware": "Funciona en CPU; no usa Internet, API, créditos ni suscripciones",
+    "quality": "Anime limpio con tinta, color simplificado y sombreado tipo cel",
+    "continuity": "Muy estable: casi no cambia entre fotogramas",
+    "hardware": "Funciona en esta PC sin Internet ni pagos",
     "recommended": false
   },
   {
@@ -22,9 +22,9 @@
     "name": "AnimeGANv3 — Hayao",
     "available": true,
     "model": "AnimeGANv3_Hayao_36.onnx",
-    "quality": "Anime con líneas marcadas y masas de color simplificadas",
-    "continuity": "Alta: conversión determinista fotograma por fotograma",
-    "hardware": "Compatible con DirectML y la GeForce 940MX",
+    "quality": "Anime clasico con lineas marcadas y color plano",
+    "continuity": "Estable: procesa cuadro por cuadro con poco cambio aleatorio",
+    "hardware": "Usa aceleración local y debería funcionar en esta PC",
     "recommended": false
   },
   {
@@ -32,18 +32,18 @@
     "name": "AnimeGANv3 — Shinkai",
     "available": true,
     "model": "AnimeGANv3_Shinkai_37.onnx",
-    "quality": "Acabado pictórico suave y colores cinematográficos",
-    "continuity": "Alta: conversión determinista fotograma por fotograma",
-    "hardware": "Compatible con DirectML y la GeForce 940MX",
+    "quality": "Aspecto suave y cinematografico, con color mas pictorico",
+    "continuity": "Estable: procesa cuadro por cuadro con poco cambio aleatorio",
+    "hardware": "Usa aceleración local y debería funcionar en esta PC",
     "recommended": false
   },
   {
     "id": "nanobanan_pro_full",
     "name": "Nano Banan Pro — Video completo IA",
     "available": true,
-    "quality": "Generación IA fotograma por fotograma con estilo anime/cinemático",
-    "continuity": "Media/alta: depende del prompt y del modelo remoto",
-    "hardware": "Requiere Internet y una API compatible (NANO_BANAN_API_KEY)",
+    "quality": "IA mas creativa, con look anime o cinematografico mas fuerte",
+    "continuity": "Media a alta: depende del estilo elegido y de la API",
+    "hardware": "Necesita Internet y una clave de API configurada",
     "recommended": false
   },
   {
