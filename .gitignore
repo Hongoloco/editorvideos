@@ -1,0 +1,11 @@
+tools/stable-diffusion.cpp/
+models/*.safetensors
+models/*.pth
+models/*.part
+models/*.log
+local_ai_install.pid
+local_ai_install_status.txt
+*_test_error.log
+ebsynth_jobs/
+jobs/
+*.tmp

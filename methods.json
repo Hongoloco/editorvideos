@@ -1,0 +1,94 @@
+[
+  {
+    "id": "free_cartoon_vibrant",
+    "name": "Cartoon Vibrante — Gratis",
+    "available": true,
+    "quality": "Paleta más simple y luminosa, colores intensos, tinta gruesa y sombras de caricatura",
+    "continuity": "Muy alta: estilo determinista y estable en todos los fotogramas",
+    "hardware": "Funciona localmente en CPU; no usa Internet, API ni créditos",
+    "recommended": true
+  },
+  {
+    "id": "free_anime_draw",
+    "name": "Dibujo Anime Local — Gratis",
+    "available": true,
+    "quality": "Contornos de tinta, colores originales simplificados y sombreado tipo cel",
+    "continuity": "Muy alta: el mismo tratamiento determinista en cada fotograma, sin parpadeo aleatorio",
+    "hardware": "Funciona en CPU; no usa Internet, API, créditos ni suscripciones",
+    "recommended": false
+  },
+  {
+    "id": "animeganv3_hayao",
+    "name": "AnimeGANv3 — Hayao",
+    "available": true,
+    "model": "AnimeGANv3_Hayao_36.onnx",
+    "quality": "Anime con líneas marcadas y masas de color simplificadas",
+    "continuity": "Alta: conversión determinista fotograma por fotograma",
+    "hardware": "Compatible con DirectML y la GeForce 940MX",
+    "recommended": false
+  },
+  {
+    "id": "animeganv3_shinkai",
+    "name": "AnimeGANv3 — Shinkai",
+    "available": true,
+    "model": "AnimeGANv3_Shinkai_37.onnx",
+    "quality": "Acabado pictórico suave y colores cinematográficos",
+    "continuity": "Alta: conversión determinista fotograma por fotograma",
+    "hardware": "Compatible con DirectML y la GeForce 940MX",
+    "recommended": false
+  },
+  {
+    "id": "nanobanan_pro_full",
+    "name": "Nano Banan Pro — Video completo IA",
+    "available": true,
+    "quality": "Generación IA fotograma por fotograma con estilo anime/cinemático",
+    "continuity": "Media/alta: depende del prompt y del modelo remoto",
+    "hardware": "Requiere Internet y una API compatible (NANO_BANAN_API_KEY)",
+    "recommended": false
+  },
+  {
+    "id": "animeganv2",
+    "name": "AnimeGANv2",
+    "available": false,
+    "quality": "Anime ligero; generación anterior",
+    "continuity": "Alta, con menor detalle",
+    "hardware": "Compatible, pero no instalado porque AnimeGANv3 lo reemplaza",
+    "recommended": false
+  },
+  {
+    "id": "whitebox",
+    "name": "White-box Cartoonization",
+    "available": false,
+    "quality": "Caricatura y pintura; menos parecido a anime",
+    "continuity": "Media/alta",
+    "hardware": "Posible en CPU, pero lento y no instalado",
+    "recommended": false
+  },
+  {
+    "id": "rerender",
+    "name": "Rerender A Video",
+    "available": false,
+    "quality": "Difusión de alta calidad con propagación temporal",
+    "continuity": "Muy alta",
+    "hardware": "Requiere aproximadamente 24 GB de VRAM; este equipo tiene 2 GB",
+    "recommended": false
+  },
+  {
+    "id": "tokenflow",
+    "name": "TokenFlow",
+    "available": false,
+    "quality": "Edición por difusión controlada por texto",
+    "continuity": "Muy alta mediante propagación de características",
+    "hardware": "Requiere una GPU CUDA moderna; incompatible con este equipo",
+    "recommended": false
+  },
+  {
+    "id": "fresco",
+    "name": "FRESCO",
+    "available": false,
+    "quality": "Traducción de video mediante correspondencia espacio-temporal",
+    "continuity": "Muy alta",
+    "hardware": "Requiere una GPU moderna; incompatible con este equipo",
+    "recommended": false
+  }
+]
