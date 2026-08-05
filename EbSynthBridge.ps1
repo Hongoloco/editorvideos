@@ -73,19 +73,19 @@ if (-not $createdNew) {
     <Border Grid.Row="1" Background="#122033" BorderBrush="#2A4869" BorderThickness="1" CornerRadius="12" Padding="14" Margin="0,0,0,12">
       <Grid>
         <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Margin="0,0,10,0" Background="#0F1C2D" BorderBrush="#2563EB" BorderThickness="1" CornerRadius="10" Padding="10">
+        <Border Grid.Column="0" Margin="0,0,10,0" Background="#0F1C2D" BorderBrush="#2563EB" BorderThickness="1.5" CornerRadius="10" Padding="10">
           <StackPanel>
             <TextBlock Text="PASO 1" Foreground="#6DCFF6" FontWeight="Bold"/>
             <TextBlock Text="Elige el video y marca el tramo." TextWrapping="Wrap" Margin="0,4,0,0"/>
           </StackPanel>
         </Border>
-        <Border Grid.Column="1" Margin="0,0,10,0" Background="#24170F" BorderBrush="#F59E0B" BorderThickness="1" CornerRadius="10" Padding="10">
+        <Border Grid.Column="1" Margin="0,0,10,0" Background="#24170F" BorderBrush="#F59E0B" BorderThickness="1.5" CornerRadius="10" Padding="10">
           <StackPanel>
             <TextBlock Text="PASO 2" Foreground="#FCD34D" FontWeight="Bold"/>
             <TextBlock Text="Edita el resultado en la web de EbSynth." TextWrapping="Wrap" Margin="0,4,0,0"/>
           </StackPanel>
         </Border>
-        <Border Grid.Column="2" Background="#0F2018" BorderBrush="#10B981" BorderThickness="1" CornerRadius="10" Padding="10">
+        <Border Grid.Column="2" Background="#0F2018" BorderBrush="#10B981" BorderThickness="1.5" CornerRadius="10" Padding="10">
           <StackPanel>
             <TextBlock Text="PASO 3" Foreground="#86EFAC" FontWeight="Bold"/>
             <TextBlock Text="Importa el MP4 y unelo al video original." TextWrapping="Wrap" Margin="0,4,0,0"/>
@@ -113,18 +113,19 @@ if (-not $createdNew) {
       <Grid.ColumnDefinitions><ColumnDefinition Width="230"/><ColumnDefinition Width="230"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
       <Border Grid.Column="0" Background="#151D29" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="11" Padding="12" Margin="0,0,10,0">
         <StackPanel>
-          <TextBlock Text="Inicio" FontWeight="Bold" Foreground="#9DD8FF" Margin="0,0,0,6"/>
+          <TextBlock Text="1. INICIO" FontWeight="Bold" Foreground="#7DD3FC" Margin="0,0,0,6"/>
           <TextBox Name="StartTime" Text="00:00:00.000"/>
         </StackPanel>
       </Border>
       <Border Grid.Column="1" Background="#151D29" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="11" Padding="12" Margin="0,0,10,0">
         <StackPanel>
-          <TextBlock Text="Final" FontWeight="Bold" Foreground="#9DD8FF" Margin="0,0,0,6"/>
+          <TextBlock Text="2. FINAL" FontWeight="Bold" Foreground="#FCD34D" Margin="0,0,0,6"/>
           <TextBox Name="EndTime" Text="00:00:10.000"/>
         </StackPanel>
       </Border>
       <Border Grid.Column="2" Background="#201830" BorderBrush="#3C2D5A" BorderThickness="1" CornerRadius="11" Padding="12">
         <StackPanel>
+          <TextBlock Text="3. SALIDA EBSYNTH" FontWeight="Bold" Foreground="#F9A8D4" Margin="0,0,0,6"/>
           <TextBlock Text="EbSynth Free exporta hasta 720p. Al importar, se restaura la resolucion y el audio del original." TextWrapping="Wrap" Foreground="#E9D5FF"/>
           <Button Name="FullRangeButton" Content="Usar todo el video" Height="30" Margin="0,8,0,0" Background="#4D2A91" IsEnabled="False"/>
         </StackPanel>
@@ -133,17 +134,17 @@ if (-not $createdNew) {
 
     <Grid Grid.Row="4" Margin="0,0,0,12">
       <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="170"/><ColumnDefinition Width="145"/></Grid.ColumnDefinitions>
-      <Button Name="PrepareButton" Grid.Column="0" Content="1. Preparar tramo" Background="#06A77D" IsEnabled="False"/>
-      <Button Name="AllKeysButton" Grid.Column="1" Content="Crear keyframes para todo el video" Margin="10,0,0,0" Background="#C026D3" IsEnabled="False"/>
-      <Button Name="WebButton" Grid.Column="2" Content="2. Abrir EbSynth" Margin="10,0,0,0" Background="#246BFF"/>
+      <Button Name="PrepareButton" Grid.Column="0" Content="Preparar tramo" Background="#10B981" IsEnabled="False"/>
+      <Button Name="AllKeysButton" Grid.Column="1" Content="Keyframes de todo el video" Margin="10,0,0,0" Background="#D946EF" IsEnabled="False"/>
+      <Button Name="WebButton" Grid.Column="2" Content="Abrir EbSynth" Margin="10,0,0,0" Background="#2563EB"/>
       <Button Name="FolderButton" Grid.Column="3" Content="Ver carpeta" Margin="10,0,0,0" IsEnabled="False"/>
     </Grid>
 
-    <Button Grid.Row="5" Name="LocalAIButton" Content="Opcional: mejorar keyframes con IA local" Height="42" Margin="0,0,0,12" Background="#EC4899" IsEnabled="False"/>
+    <Button Grid.Row="5" Name="LocalAIButton" Content="Opcional: mejorar keyframes con IA" Height="42" Margin="0,0,0,12" Background="#EC4899" IsEnabled="False"/>
 
     <Border Grid.Row="6" Background="#0A1018" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="12" Padding="14">
       <StackPanel>
-        <TextBlock Name="StatusText" Text="Sin trabajo activo" FontSize="16" FontWeight="Bold"/>
+        <TextBlock Name="StatusText" Text="SIN TRABAJO ACTIVO" FontSize="16" FontWeight="Bold"/>
         <Grid Margin="0,10,0,0">
           <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="90"/></Grid.ColumnDefinitions>
           <ProgressBar Name="Progress" Height="22" Minimum="0" Maximum="100" Value="0" Foreground="#20E39A" Background="#223245"/>
@@ -158,7 +159,7 @@ if (-not $createdNew) {
       </StackPanel>
     </Border>
 
-    <Button Grid.Row="7" Name="ImportButton" Content="3. Importar resultado y unir al video" Height="44" Margin="0,14,0,0" Background="#E9852A" IsEnabled="False"/>
+    <Button Grid.Row="7" Name="ImportButton" Content="Importar resultado y unir" Height="44" Margin="0,14,0,0" Background="#F97316" IsEnabled="False"/>
   </Grid>
 </Window>
 '@

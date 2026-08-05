@@ -1,3 +1,3 @@
 @echo off
 cd /d "%~dp0"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -STA -File "%~dp0EbSynthBridge.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0AnimeVideoStudioUnified.ps1" -StartTab ebsynth

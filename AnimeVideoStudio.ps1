@@ -132,7 +132,9 @@ if (-not $createdNew) {
         <Grid.RowDefinitions>
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="1. VIDEO DE ENTRADA" FontSize="13" FontWeight="Bold" Foreground="#7DD3FC" Margin="0,0,0,10"/>
         <Grid Grid.Row="0">
           <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="140"/><ColumnDefinition Width="130"/></Grid.ColumnDefinitions>
           <TextBox Name="VideoPath" Grid.Column="0" FontSize="14"/>
@@ -149,7 +151,7 @@ if (-not $createdNew) {
       <Grid.ColumnDefinitions><ColumnDefinition Width="390"/><ColumnDefinition Width="12"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
       <Border Grid.Column="0" Background="{StaticResource CardBrush}" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="12" Padding="14">
         <StackPanel>
-          <TextBlock Text="Metodo" FontSize="16" FontWeight="Bold" Margin="0,0,0,8" Foreground="#9DD8FF"/>
+          <TextBlock Text="2. ESTILO" FontSize="13" FontWeight="Bold" Margin="0,0,0,8" Foreground="#FCD34D"/>
           <ComboBox Name="MethodBox" DisplayMemberPath="name"/>
         </StackPanel>
       </Border>
@@ -166,7 +168,7 @@ if (-not $createdNew) {
           <RowDefinition Height="Auto"/>
           <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Name="JobStatus" Text="Sin trabajo activo" FontSize="17" FontWeight="Bold" Margin="0,0,0,10" Foreground="#F5FBFF"/>
+        <TextBlock Name="JobStatus" Text="3. SIN TRABAJO ACTIVO" FontSize="17" FontWeight="Bold" Margin="0,0,0,10" Foreground="#F5FBFF"/>
         <Grid Grid.Row="1" Margin="0,0,0,12">
           <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="95"/></Grid.ColumnDefinitions>
           <ProgressBar Name="Progress" Height="22" Minimum="0" Maximum="100" Value="0" Foreground="#20E39A" Background="#223245"/>
@@ -191,9 +193,9 @@ if (-not $createdNew) {
       </Grid.ColumnDefinitions>
       <TextBlock Grid.Column="0" VerticalAlignment="Center" Foreground="#9CB1C8" Text="El archivo original no se modifica. La salida se guarda en la carpeta del trabajo."/>
       <Button Name="OpenButton" Grid.Column="1" Content="Ver carpeta" Margin="10,0,0,0" IsEnabled="False"/>
-      <Button Name="EbSynthButton" Grid.Column="2" Content="Abrir editor EbSynth" Margin="10,0,0,0" Background="#E9852A"/>
-      <Button Name="PreviewButton" Grid.Column="3" Content="Probar 6 s" Margin="10,0,0,0" Background="#246BFF" IsEnabled="False"/>
-      <Button Name="StartButton" Grid.Column="4" Content="Crear video final" Margin="10,0,0,0" Background="#04A777" IsEnabled="False"/>
+      <Button Name="EbSynthButton" Grid.Column="2" Content="Editor EbSynth" Margin="10,0,0,0" Background="#F97316"/>
+      <Button Name="PreviewButton" Grid.Column="3" Content="Vista previa" Margin="10,0,0,0" Background="#2563EB" IsEnabled="False"/>
+      <Button Name="StartButton" Grid.Column="4" Content="Crear final" Margin="10,0,0,0" Background="#10B981" IsEnabled="False"/>
     </Grid>
   </Grid>
 </Window>

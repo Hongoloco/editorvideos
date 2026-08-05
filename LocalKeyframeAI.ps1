@@ -93,19 +93,19 @@ if (-not $createdNew) {
     <Border Grid.Row="1" Background="#122033" BorderBrush="#2A4869" BorderThickness="1" CornerRadius="12" Padding="14" Margin="0,0,0,12">
       <Grid>
         <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
-        <Border Grid.Column="0" Margin="0,0,10,0" Background="#0F1C2D" BorderBrush="#2563EB" BorderThickness="1" CornerRadius="10" Padding="10">
+        <Border Grid.Column="0" Margin="0,0,10,0" Background="#0F1C2D" BorderBrush="#2563EB" BorderThickness="1.5" CornerRadius="10" Padding="10">
           <StackPanel>
             <TextBlock Text="PASO 1" Foreground="#6DCFF6" FontWeight="Bold"/>
             <TextBlock Text="Elige la carpeta de keyframes." TextWrapping="Wrap" Margin="0,4,0,0"/>
           </StackPanel>
         </Border>
-        <Border Grid.Column="1" Margin="0,0,10,0" Background="#24170F" BorderBrush="#F59E0B" BorderThickness="1" CornerRadius="10" Padding="10">
+        <Border Grid.Column="1" Margin="0,0,10,0" Background="#24170F" BorderBrush="#F59E0B" BorderThickness="1.5" CornerRadius="10" Padding="10">
           <StackPanel>
             <TextBlock Text="PASO 2" Foreground="#FCD34D" FontWeight="Bold"/>
             <TextBlock Text="Prueba una sola imagen primero." TextWrapping="Wrap" Margin="0,4,0,0"/>
           </StackPanel>
         </Border>
-        <Border Grid.Column="2" Background="#0F2018" BorderBrush="#10B981" BorderThickness="1" CornerRadius="10" Padding="10">
+        <Border Grid.Column="2" Background="#0F2018" BorderBrush="#10B981" BorderThickness="1.5" CornerRadius="10" Padding="10">
           <StackPanel>
             <TextBlock Text="PASO 3" Foreground="#86EFAC" FontWeight="Bold"/>
             <TextBlock Text="Si te gusta, genera todas las imagenes." TextWrapping="Wrap" Margin="0,4,0,0"/>
@@ -126,7 +126,7 @@ if (-not $createdNew) {
       <Grid.ColumnDefinitions><ColumnDefinition Width="270"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
       <Border Grid.Column="0" Background="#151D29" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="11" Padding="12" Margin="0,0,10,0">
         <StackPanel>
-          <TextBlock Text="Estilo" FontWeight="Bold" Foreground="#9DD8FF" Margin="0,0,0,6"/>
+          <TextBlock Text="1. ESTILO" FontWeight="Bold" Foreground="#7DD3FC" Margin="0,0,0,6"/>
           <ComboBox Name="StyleBox" SelectedIndex="0">
             <ComboBoxItem Content="Anime dibujado a mano"/>
             <ComboBoxItem Content="Cartoon cinematográfico"/>
@@ -136,7 +136,8 @@ if (-not $createdNew) {
       </Border>
       <Border Grid.Column="1" Background="#151D29" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="11" Padding="12">
         <StackPanel>
-          <TextBlock Text="Descripcion del estilo (conviene escribirla en ingles)" FontWeight="Bold" Foreground="#9DD8FF" Margin="0,0,0,6"/>
+          <TextBlock Text="2. DESCRIPCION DEL ESTILO" FontWeight="Bold" Foreground="#FCD34D" Margin="0,0,0,6"/>
+          <TextBlock Text="Conviene escribirla en ingles." Foreground="#A5B4C7" Margin="0,0,0,6"/>
           <TextBox Name="PromptBox" Height="62" TextWrapping="Wrap" AcceptsReturn="True"/>
         </StackPanel>
       </Border>
@@ -144,7 +145,7 @@ if (-not $createdNew) {
 
     <Border Grid.Row="4" Background="#151D29" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="11" Padding="12" Margin="0,0,0,12">
       <StackPanel>
-        <TextBlock Text="Que evitar" FontWeight="Bold" Foreground="#9DD8FF" Margin="0,0,0,6"/>
+        <TextBlock Text="3. QUE EVITAR" FontWeight="Bold" Foreground="#F9A8D4" Margin="0,0,0,6"/>
         <TextBox Name="NegativeBox"/>
       </StackPanel>
     </Border>
@@ -153,7 +154,7 @@ if (-not $createdNew) {
       <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="185"/><ColumnDefinition Width="185"/></Grid.ColumnDefinitions>
       <Border Grid.Column="0" Background="#151D29" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="11" Padding="12" Margin="0,0,10,0">
         <StackPanel>
-          <TextBlock Name="StrengthText" Text="Fuerza del redibujo: 0.45" FontWeight="Bold" Foreground="#9DD8FF"/>
+          <TextBlock Name="StrengthText" Text="Fuerza del redibujo: 0.45" FontWeight="Bold" Foreground="#86EFAC"/>
           <Slider Name="StrengthSlider" Minimum="0.15" Maximum="0.70" Value="0.45" TickFrequency="0.01" IsSnapToTickEnabled="True" Margin="0,8,0,0"/>
         </StackPanel>
       </Border>
@@ -173,15 +174,15 @@ if (-not $createdNew) {
 
     <Grid Grid.Row="6" Margin="0,0,0,12">
       <Grid.ColumnDefinitions><ColumnDefinition Width="210"/><ColumnDefinition Width="*"/><ColumnDefinition Width="*"/><ColumnDefinition Width="150"/></Grid.ColumnDefinitions>
-      <Button Name="InstallButton" Content="1. Instalar IA local" Background="#246BFF"/>
-      <Button Name="PreviewButton" Grid.Column="1" Content="2. Probar 1 keyframe" Margin="10,0,0,0" Background="#8B5CF6"/>
-      <Button Name="AllButton" Grid.Column="2" Content="3. Generar todos" Margin="10,0,0,0" Background="#D946EF"/>
+      <Button Name="InstallButton" Content="Instalar IA local" Background="#2563EB"/>
+      <Button Name="PreviewButton" Grid.Column="1" Content="Probar 1 keyframe" Margin="10,0,0,0" Background="#8B5CF6"/>
+      <Button Name="AllButton" Grid.Column="2" Content="Generar todos" Margin="10,0,0,0" Background="#D946EF"/>
       <Button Name="OpenButton" Grid.Column="3" Content="Ver carpeta" Margin="10,0,0,0"/>
     </Grid>
 
     <Border Grid.Row="7" Background="#0A1018" BorderBrush="#2A3A50" BorderThickness="1" CornerRadius="12" Padding="14">
       <StackPanel>
-        <TextBlock Name="StatusText" Text="Listo para configurar" FontSize="16" FontWeight="Bold"/>
+        <TextBlock Name="StatusText" Text="LISTO PARA CONFIGURAR" FontSize="16" FontWeight="Bold"/>
         <Grid Margin="0,10,0,0">
           <Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="90"/></Grid.ColumnDefinitions>
           <ProgressBar Name="Progress" Height="22" Minimum="0" Maximum="100" Value="0" Foreground="#20E39A" Background="#223245"/>

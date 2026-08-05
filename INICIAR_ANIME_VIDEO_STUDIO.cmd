@@ -1,4 +1,4 @@
 @echo off
 cd /d "%~dp0"
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0AnimeVideoStudio.ps1"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0AnimeVideoStudioUnified.ps1" -StartTab main
 
